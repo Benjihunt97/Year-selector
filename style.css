@@ -1,0 +1,88 @@
+*,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  
+}
+
+main {
+  display: grid;
+  place-items: center;
+  
+  width: 100%;
+}
+
+#year-container {
+  display: flex;
+  gap: 1.25rem;
+  
+}
+
+section {
+  position: relative;
+  display: grid;
+  gap: .75rem;
+  overflow: hidden;
+}
+
+section::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 1.75px;
+  height: 100%;
+  background: #1f1f1f;
+  z-index: -1;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  
+  width: 40px;
+  aspect-ratio: 1;
+  
+  font-size: 1.5rem;
+  color: #fff;
+  
+  outline: 0;
+  border: 1px solid #1f1f1f;
+  border-radius: .25rem;
+  background: #1f1f1f;
+}
+
+.year-digits {
+  position: relative;
+  top: 0;
+  z-index: -1;
+  
+  display: grid;
+  
+  min-height: 80px;
+  max-height: 80px;
+  font-size: 1.5rem;
+  
+  background: #fff;
+  border: 1px solid #1f1f1f;
+  border-radius: 100vw;
+  overflow-y: hidden;
+}
+
+.year-digits div {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 80px;
+  max-height: 80px;
+  overflow: hidden;
+}
